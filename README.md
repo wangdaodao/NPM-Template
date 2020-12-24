@@ -1,4 +1,4 @@
-# new
+# npm-demo
 
 ## Project setup
 ```
