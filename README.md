@@ -1,24 +1,19 @@
-# npm-demo
+# NPM组件模板
 
-## Project setup
-```
+此代码为 NPM 初始化模板，基于Vue-CLI搭建。
+
+## 命令
+
+```shell
+# 安装
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# 运行
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+# 打包
 npm run package
-```
 
-### Lints and fixes files
-```
+# 检查修复
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
