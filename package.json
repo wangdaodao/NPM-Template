@@ -6,9 +6,9 @@
   "author": "wangdaodao <hi@wangdaodao.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "package": "vue-cli-service build --target lib --name hello-world ./src/components/index.js",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib --name hello-world ./src/components/index.js"
+    "lint": "vue-cli-service lint"
   },
   "main": "dist/hello-world.common.js",
   "browser": "dist/hello-world.umd.js",
