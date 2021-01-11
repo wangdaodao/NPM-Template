@@ -11,9 +11,12 @@ npm install
 # 运行
 npm run serve
 
-# 打包
-npm run package
+# 测试
+npm run test:unit
 
 # 检查修复
 npm run lint
+
+# 打包
+npm run package
 ```
