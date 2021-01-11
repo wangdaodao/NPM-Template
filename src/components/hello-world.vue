@@ -1,12 +1,12 @@
 <template>
-  <div>demoComponents</div>
+  <h1>{{msg}}</h1>
 </template>
 
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 组件名称 from '组件路径';
 export default {
-  name: 'demoComponents',
+  name: 'HelloWorld',
   //引入组件
   props: {},
   //引入混淆
@@ -15,7 +15,9 @@ export default {
   components: {},
   data() {
     //这里存放数据
-    return {};
+    return {
+      msg: 'Hello Jest',
+    };
   },
   //监听属性 类似于data概念
   computed: {},
@@ -45,7 +47,7 @@ export default {
 </script>
 
 <style lang='scss'>
-div{
+h1 {
   text-align: center;
 }
 </style>

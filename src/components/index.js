@@ -1,12 +1,12 @@
-import demoComponents from './index.vue'
+import helloWorld from './hello-world.vue'
 
-demoComponents.install = function (Vue) {
-  Vue.component(demoComponents.name, demoComponents)
+helloWorld.install = function (Vue) {
+  Vue.component(helloWorld.name, helloWorld)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.demoComponents = demoComponents;
-  window.Vue.use(demoComponents);
+  window.helloWorld = helloWorld;
+  window.Vue.use(helloWorld);
 }
 
-export default demoComponents
+export default helloWorld
