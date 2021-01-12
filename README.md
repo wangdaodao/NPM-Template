@@ -14,7 +14,7 @@ npm run serve
 # 单元测试
 npm run test:unit
 
-# E2E测试
+# E2E测试 执行前先执行 npm run serve
 npm run test:e2e
 
 # 检查修复
