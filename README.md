@@ -43,6 +43,29 @@ module.exports = {
 }
 ```
 
+多组件按需加载：
+
+```js
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ],
+  plugins: [
+    [
+      "component",
+      { "libraryName": "element-gui", "styleLibraryName": "theme-chalk" },
+      "element-gui"
+    ],
+    [
+      "component",
+      { "libraryName": "materiel-demo", "style": false, },
+      "materiel-demo"
+    ]
+  ]
+}
+
+```
+
 
 ```js
 // 只加载component1
