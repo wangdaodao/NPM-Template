@@ -1,44 +1,41 @@
 {
-  "name": "hello-world",
-  "version": "1.0.0",
-  "private": false,
-  "description": "A hello-world component for Vue.js",
-  "author": "wangdaodao <hi@wangdaodao.com>",
+  "name": "materiel-demo",
+  "version": "1.0.2",
+  "description": "a vue component materiel",
   "scripts": {
+    "test": "eslint lib/index.js",
     "serve": "vue-cli-service serve",
-    "package": "vue-cli-service build --target lib --name hello-world ./src/components/index.js",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "testcafe all tests/e2e/*.test.js --app-init-delay 10000 -S -s screenshots",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name index --dest package lib/index.js"
   },
-  "main": "dist/hello-world.common.js",
-  "browser": "dist/hello-world.umd.js",
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.10",
+    "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "^4.5.10",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/test-utils": "^1.1.2",
+    "@vue/cli-plugin-babel": "^4.4.0",
+    "@vue/cli-plugin-eslint": "^4.4.0",
+    "@vue/cli-service": "^4.4.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "jest": "^26.6.3",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "testcafe": "^1.10.1",
     "vue-template-compiler": "^2.6.11"
   },
+  "main": "lib/index.js",
+  "style": "package/index.css",
+  "files": [
+    "lib",
+    "package"
+  ],
+  "keywords": [
+    "templete",
+    "materiel",
+    "vue"
+  ],
+  "author": "wangzhe <hi@wangdaodao.com>",
+  "license": "MIT",
   "eslintConfig": {
     "root": true,
     "env": {
@@ -51,28 +48,11 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "keywords": [
-    "demo",
-    "vue"
-  ],
-  "license": "MIT",
-  "style": "dist/demo.css"
+  ]
 }
