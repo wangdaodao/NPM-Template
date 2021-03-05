@@ -1,12 +1,22 @@
-import helloWorld from './hello-world.vue'
+import components1 from './name1/index.js'
+import components2 from './name2/index.js'
 
-helloWorld.install = function (Vue) {
-  Vue.component(helloWorld.name, helloWorld)
+const components = [
+  components1,
+  components2
+]
+
+const install = function (Vue) { 
+  components.forEach(component => {
+    Vue.component(component.name, component);
+  });
 }
-
 if (typeof window !== 'undefined' && window.Vue) {
-  window.helloWorld = helloWorld;
-  window.Vue.use(helloWorld);
+  install(window.Vue);
 }
 
-export default helloWorld
+export default {
+  install,
+  components1,
+  components2
+}
