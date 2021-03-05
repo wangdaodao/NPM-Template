@@ -1,9 +1,7 @@
 # 物料组件demo
 基于`Vue CLI 3.0` 封装的物料库模版，内置两个组件component1，和component2，支持统一加载和按需加载，按需加载用`babel-plugin-component`组件支持。
 
-此代码为 NPM 初始化模板，基于Vue-CLI搭建，增加了UT测试和E2E测试。
-
-## 命令
+## 安装
 
 ```shell
 npm install materiel-demo --save
@@ -22,6 +20,37 @@ Vue.use(materiel)
 
 首先，安装 `babel-plugin-component`：
 
-# 打包
-npm run package
+```shell
+npm install babel-plugin-component -D
+```
+
+然后将`babel.config.js`修改为：
+
+```js
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ],
+  plugins: [
+    [
+      "component",
+      {
+        "libraryName": "materiel-demo",
+        "style": false,
+      }
+    ]
+  ]
+}
+```
+
+
+```js
+// 只加载component1
+import { component1 } from 'materiel-demo'
+Vue.use(component1)
+
+// 加载component1和component2
+import { component1 , component2} from 'materiel-demo'
+Vue.use(component1)
+Vue.use(component2)
 ```
