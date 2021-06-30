@@ -1,6 +1,6 @@
 {
   "name": "materiel-demo",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "a vue component materiel",
   "scripts": {
     "test": "eslint lib/index.js",
@@ -23,10 +23,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "main": "lib/index.js",
+  "main": "package/index.common.js",
   "style": "package/index.css",
   "files": [
-    "lib",
     "package"
   ],
   "keywords": [
@@ -36,20 +35,6 @@
   ],
   "author": "wangzhe <hi@wangdaodao.com>",
   "license": "MIT",
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
